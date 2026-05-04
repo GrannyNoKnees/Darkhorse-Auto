@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // 🔑 PASTE YOUR MONGODB STRING HERE
-mongoose.connect("mongodb+srv://TrentonReeser06:<Loren1431>@darkhorseauto.b2egjrk.mongodb.net/?appName=DarkHorseAuto");
+mongoose.connect("mongodb+srv://TrentonReeser06:<db_password>@darkhorseauto.b2egjrk.mongodb.net/?appName=DarkHorseAuto");
 
 // MODELS
 const Car = mongoose.model('Car', {
