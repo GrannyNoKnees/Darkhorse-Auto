@@ -3,11 +3,16 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
-// 🔑 PASTE YOUR MONGODB STRING HERE
-mongoose.connect("mongodb+srv://TrentonReeser06:<Jewymcjewface>@darkhorseauto.b2egjrk.mongodb.net/darkhorseautoappName=DarkHorseAuto");
+// ✅ MongoDB Connection
+mongoose.connect(
+  "mongodb+srv://TrentonReeser06:Jewymcjewface@darkhorseauto.b2egjrk.mongodb.net/darkhorseauto?retryWrites=true&w=majority&appName=DarkHorseAuto"
+)
+.then(() => console.log("✅ MongoDB Connected"))
+.catch(err => console.error("❌ Mongo Error:", err));
 
 // MODELS
 const Car = mongoose.model('Car', {
@@ -44,4 +49,9 @@ app.post('/lead', async (req, res) => {
   res.json(lead);
 });
 
-app.listen(3000, () => console.log("Server running"));
+// ✅ Render uses process.env.PORT
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
