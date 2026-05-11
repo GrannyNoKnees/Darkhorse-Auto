@@ -57,5 +57,5 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("https://maracas-ocelot-fbb8.squarespace.com/inventory");
+  res.send("🚗 Dark Horse Auto API is running");
 });
