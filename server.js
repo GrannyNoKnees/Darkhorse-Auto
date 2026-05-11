@@ -9,7 +9,7 @@ app.use(express.json());
 
 // ✅ MongoDB Connection
 mongoose.connect(
-  "mongodb+srv://TrentonReeser06:Jewymcjewface@darkhorseauto.b2egjrk.mongodb.net/darkhorseauto?retryWrites=true&w=majority&appName=DarkHorseAuto/dealership"
+  "mongodb+srv://TrentonReeser06:Jewymcjewface@darkhorseauto.b2egjrk.mongodb.net/darkhorseauto?retryWrites=true&w=majority&appName=DarkHorseAuto"
 )
 .then(() => console.log("✅ MongoDB Connected"))
 .catch(err => console.error("❌ Mongo Error:", err));
