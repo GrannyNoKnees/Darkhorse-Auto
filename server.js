@@ -56,6 +56,6 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
 
-app.get("/", (req, res) => {
-  res.send("🚗 Dark Horse Auto API is running");
+app.get("/inventory", (req, res) => {
+  res.json({ message: "Inventory route works" 
 });
